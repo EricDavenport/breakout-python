@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 
 let paddleHeight = 10; 
 let paddleWidth = 75; 
-let paddleX = (canas.width - paddleWidth / 2);
+let paddleX = (canvas.width - paddleWidth / 2);
 let ballRadius = 10;
 let x = canvas.width / 2;
 let y = canvas.height - 30;
@@ -36,7 +36,7 @@ function drawBall() {
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
     ctx.fillStyle = '#ffffff';
     ctx.fill();
-    ctx.closPath();
+    ctx.closePath();
 }
 
 function drawPaddle() {
@@ -75,9 +75,6 @@ function draw() {
     } else if (leftPressed && paddleX > 0) {
         paddleX -= 7;
     }
-
-    x += dx;
-    y += dy;
 }
 
 draw();
