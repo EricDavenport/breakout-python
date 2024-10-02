@@ -4,11 +4,11 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #060606;
+    background-color: #d71717;
 }
 
 canvas {
-    border: 1px solid #ffffff;
+    border: 3px solid #ffffff;
     display: block;
     margin: 0 auto;
 }
