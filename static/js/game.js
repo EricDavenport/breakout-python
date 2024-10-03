@@ -125,13 +125,17 @@ function draw() {
 
     if (y + dy < ballRadius) {
         dy = -dy;
-    } else if (y + dy > canvas.height - paddleHeight) {
+    } 
+
+    if (y + dy > canvas.height - paddleHeight - ballRadius) {
         if (x > paddleX && x < paddleX + paddleWidth) {
             dy = -dy;
             dx = 8 * ((x - (paddleX + paddleWidth / 2)) / paddleWidth);
-        } else if (y + dy > canvas.height - ballRadius){
-            gameOver = true;
         }
+    }
+
+    if (y + dy > canvas.height - ballRadius){
+        gameOver = true;
     }
 
     if (!gameOver) {
